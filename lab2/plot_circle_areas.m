@@ -1,12 +1,13 @@
+% 3. task
 function plot_circle_areas(circle_areas)
-    % Funkcja generuje wykres wektora circle_areas i zapisuje go do pliku.
+    % The function generates a plot of the circle_areas vector and saves it to a file.
 
-    figure; % Tworzy nowe okno dla wykresu
-    plot(circle_areas, 'o-'); % Generuje wykres liniowy z markerami w postaci kółek
-    xlabel('Numer okręgu'); % Opis osi X
-    ylabel('Suma pól powierzchni do tego okręgu'); % Opis osi Y
-    title('Sumaryczne pole powierzchni okręgów'); % Tytuł wykresu
+    figure; % Create new window for the plot
+    plot(circle_areas, 'o-');   % Generates a line plot with circle markers
+    xlabel('Circle number');    % X axis description
+    ylabel('Total area of circles up to this one');  % Y axis description
+    title('Cumulative area of circles');             % Plot title
     
-    % Zapisanie wykresu do pliku PNG
+    % Saving the plot to a PNG file
     %saveas(gcf, 'zadanie3.png');
 end

@@ -1,18 +1,19 @@
+% 2. task
 function [circles, index_number, circle_areas, rand_counts, counts_mean] = generate_circles(a, r_max, n_max)
     index_number = 193257;
-    circles = zeros(3, n_max); % Macierz okręgów
-    area_vector = zeros(1, n_max); % Wektor pól okręgów
-    rand_counts = zeros(1, n_max); % Wektor liczby losowań potrzebnych do znalezienia każdego okręgu
-    counts_mean = zeros(1, n_max); % Wektor średniej liczby losowań do znalezienia i okręgów
+    circles = zeros(3, n_max);      % Macierz okręgów
+    area_vector = zeros(1, n_max);  % Wektor pól okręgów
+    rand_counts = zeros(1, n_max);  % Wektor liczby losowań potrzebnych do znalezienia każdego okręgu
+    counts_mean = zeros(1, n_max);  % Wektor średniej liczby losowań do znalezienia i okręgów
 
     circle_count = 0; % Licznik dodanych okręgów
 
     for i = 1:n_max
-        valid = false; % Flaga weryfikująca poprawność okręgu
-        attempts = 0; % Licznik prób dla danego okręgu
+        valid = false;  % Flaga weryfikująca poprawność okręgu
+        attempts = 0;   % Licznik prób dla danego okręgu
         
         while ~valid && attempts < 1000
-            R = rand() * r_max; % Losowy promień
+            R = rand() * r_max;         % Losowy promień
             X = rand() * (a - 2*R) + R; % Losowa współrzędna X
             Y = rand() * (a - 2*R) + R; % Losowa współrzędna Y
             
